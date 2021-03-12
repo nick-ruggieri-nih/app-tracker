@@ -15,7 +15,7 @@ function App() {
 				<Switch>
 					<Route path='/create-vacancy' component={CreateVacancy} />
 					<Route path='/vacancy-dashboard' exact component={VacancyDashboard} />
-					<Route path='/vacancy/:sysId' component={ViewVacancyDetails} />
+					{/* <Route path='/vacancy/:sysId' component={ViewVacancyDetails} /> */}
 					<Route path='/applicant-form' exact component={ApplicantForm} />
 					<Route path='/' exact component={Home} />
 				</Switch>

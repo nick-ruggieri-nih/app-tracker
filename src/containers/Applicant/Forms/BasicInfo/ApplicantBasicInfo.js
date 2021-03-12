@@ -10,8 +10,6 @@ import {
 import './ApplicantBasicInfo.css';
 
 const ApplicantBasicInfo = () => {
-	console.log('lala');
-
 	const phonePrefixSelector1 = (
 		<Form.Item name='prefix1' noStyle>
 			<Select
