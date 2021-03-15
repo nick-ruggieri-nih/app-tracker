@@ -1,17 +1,11 @@
-import {
-	Form,
-	Input,
-	Slider,
-	DatePicker,
-	InputNumber,
-	Button,
-	Select,
-} from 'antd';
+import { Form, Input, Slider, Button, Select } from 'antd';
 import './ApplicantBasicInfo.css';
+
+const { Option } = Select;
 
 const ApplicantBasicInfo = () => {
 	const phonePrefixSelector1 = (
-		<Form.Item name='prefix1' noStyle>
+		<Form.Item name='phonePrefix' noStyle>
 			<Select
 				defaultValue='+1'
 				style={{
@@ -26,7 +20,7 @@ const ApplicantBasicInfo = () => {
 	);
 
 	const phonePrefixSelector2 = (
-		<Form.Item name='prefix2' noStyle>
+		<Form.Item name='busPhonePrefix' noStyle>
 			<Select
 				defaultValue='+1'
 				style={{
