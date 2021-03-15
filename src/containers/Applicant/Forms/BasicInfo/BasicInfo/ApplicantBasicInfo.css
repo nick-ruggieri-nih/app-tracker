@@ -8,13 +8,8 @@
 	height: 40px;
 }
 
-.names > * {
-	height: 40px;
-	width: 249.7px;
-}
-
-.names {
-	padding-bottom: 40px !important;
+.basicInfoForm {
+	padding: 10px;
 }
 
 .title-desc {
@@ -35,4 +30,33 @@
 	font-size: 18px;
 	letter-spacing: 0;
 	line-height: 24px;
+}
+.names {
+	padding-bottom: 40px !important;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.names > * {
+	height: auto;
+	/* width: 100%; */
+	flex-basis: auto;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.names > * > * {
+	flex-basis: auto;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.emailDiv {
+	flex-grow: 1;
+}
+
+.phones {
+	flex-grow: 1;
 }

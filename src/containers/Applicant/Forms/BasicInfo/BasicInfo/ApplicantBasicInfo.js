@@ -4,7 +4,7 @@ import './ApplicantBasicInfo.css';
 const { Option } = Select;
 
 const ApplicantBasicInfo = () => {
-	const phonePrefixSelector1 = (
+	const phonePrefixSelector = (
 		<Form.Item name='phonePrefix' noStyle>
 			<Select
 				defaultValue='+1'
@@ -19,7 +19,7 @@ const ApplicantBasicInfo = () => {
 		</Form.Item>
 	);
 
-	const phonePrefixSelector2 = (
+	const busPhonePrefixSelector = (
 		<Form.Item name='busPhonePrefix' noStyle>
 			<Select
 				defaultValue='+1'
@@ -35,17 +35,18 @@ const ApplicantBasicInfo = () => {
 	);
 
 	return (
-		<Form layout='vertical' name='BasicInfo' style={{ paddingLeft: '10px' }}>
-			<h3 className='form-title'>Basic Information</h3>
-			<p className='title-desc'>
-				Let’s start with some basic questions. You’ll have a chance to review
-				everything before submitting.
-			</p>
+		<Form layout='vertical' name='BasicInfo' className='basicInfoForm'>
+			<div className='form-desc'>
+				<h3 className='form-title'>Basic Information</h3>
+				<p className='title-desc'>
+					Let’s start with some basic questions. You’ll have a chance to review
+					everything before submitting.
+				</p>
+			</div>
 			<div className='names'>
 				<Form.Item
 					name={['user', 'name', 'first']}
 					label='First Name'
-					style={{ display: 'inline-block' }}
 					rules={[
 						{
 							required: true,
@@ -55,17 +56,12 @@ const ApplicantBasicInfo = () => {
 				>
 					<Input placeholder='Please Enter' />
 				</Form.Item>
-				<Form.Item
-					name={['user', 'name', 'middle']}
-					label='Middle Name'
-					style={{ display: 'inline-block', marginLeft: '10px' }}
-				>
+				<Form.Item name={['user', 'name', 'middle']} label='Middle Name'>
 					<Input placeholder='Please Enter' />
 				</Form.Item>
 				<Form.Item
 					name={['user', 'name', 'last']}
 					label='Last Name'
-					style={{ display: 'inline-block', marginLeft: '10px' }}
 					rules={[
 						{
 							required: true,
@@ -76,50 +72,49 @@ const ApplicantBasicInfo = () => {
 					<Input placeholder='Please Enter' />
 				</Form.Item>
 			</div>
-			<Form.Item
-				name={['user', 'email']}
-				label='Email Address'
-				style={{ width: '767px' }}
-				rules={[
-					{
-						type: 'email',
-						required: true,
-						message: 'Please enter a valid email address',
-					},
-				]}
-			>
-				<Input type='email' placeholder='Please Enter' />
-			</Form.Item>
-			<Form.Item
-				name={['user', 'phone-number']}
-				label='Phone Number'
-				style={{ display: 'inline-block' }}
-				rules={[
-					{
-						required: true,
-						message: 'Please enter a valid phone number',
-					},
-				]}
-			>
-				<Input
-					type='tel'
-					addonBefore={phonePrefixSelector1}
-					placeholder='(123) 456-7890'
-					style={{ width: '312.06px' }}
-				/>
-			</Form.Item>
-			<Form.Item
-				name={['user', 'business-number']}
-				label='Business Phone Number'
-				style={{ display: 'inline-block', marginLeft: '10px' }}
-			>
-				<Input
-					type='tel'
-					addonBefore={phonePrefixSelector2}
-					placeholder='(123) 456-7890'
-					style={{ width: '312.06px' }}
-				/>
-			</Form.Item>
+			<div className='emailDiv'>
+				<Form.Item
+					name={['user', 'email']}
+					label='Email Address'
+					rules={[
+						{
+							type: 'email',
+							required: true,
+							message: 'Please enter a valid email address',
+						},
+					]}
+				>
+					<Input type='email' placeholder='Please Enter' />
+				</Form.Item>
+			</div>
+			<div className='phones'>
+				<Form.Item
+					name={['user', 'phone-number']}
+					label='Phone Number'
+					rules={[
+						{
+							required: true,
+							message: 'Please enter a valid phone number',
+						},
+					]}
+				>
+					<Input
+						type='tel'
+						addonBefore={phonePrefixSelector}
+						placeholder='(123) 456-7890'
+					/>
+				</Form.Item>
+				<Form.Item
+					name={['user', 'business-number']}
+					label='Business Phone Number'
+				>
+					<Input
+						type='tel'
+						addonBefore={busPhonePrefixSelector}
+						placeholder='(123) 456-7890'
+					/>
+				</Form.Item>
+			</div>
 			<Form.Item
 				name={['user', 'degree']}
 				label='Do you possess a Doctorate Degree?'
