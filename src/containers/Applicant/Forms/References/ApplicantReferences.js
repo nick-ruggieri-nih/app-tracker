@@ -15,8 +15,8 @@ const applicantReferences = (numRef = 3) => {
 					</p>
 				</div>
 				<div className='collapse-div'>
-					<Collapse>
-						<Panel header='Reference 1'>
+					<Collapse accordion='true' defaultActiveKey={['1']}>
+						<Panel header='Reference 1' key='1'>
 							<Form
 								layout='vertical'
 								name='References'
@@ -88,7 +88,7 @@ const applicantReferences = (numRef = 3) => {
 								</Form.Item>
 							</Form>
 						</Panel>
-						<Panel header='Reference 2'>
+						<Panel header='Reference 2' key='2'>
 							<Form
 								layout='vertical'
 								name='References'
@@ -160,7 +160,7 @@ const applicantReferences = (numRef = 3) => {
 								</Form.Item>
 							</Form>
 						</Panel>
-						<Panel header='Reference 3'>
+						<Panel header='Reference 3' key='3'>
 							<Form
 								layout='vertical'
 								name='References'
