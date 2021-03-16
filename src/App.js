@@ -6,8 +6,9 @@ import Layout from './hoc/Layout/Layout';
 import Home from './containers/Home/Home';
 import CreateVacancy from './containers/CreateVacancy/CreateVacancy';
 import VacancyDashboard from './containers/VacancyDashboard/VacancyDashboard';
-import ApplicantBasicInfo from './containers/Applicant/Forms/BasicInfo/BasicInfo/ApplicantBasicInfo';
+import ApplicantBasicInfo from './containers/Applicant/Forms/BasicInfo/ApplicantBasicInfo';
 import ApplicantAddress from './containers/Applicant/Forms/Address/ApplicantAddress';
+import ApplicantReferences from './containers/Applicant/Forms/References/ApplicantReferences';
 
 function App() {
 	return (
@@ -26,6 +27,11 @@ function App() {
 						path='/applicant-form-address'
 						exact
 						component={ApplicantAddress}
+					/>
+					<Route
+						path='/applicant-form-references'
+						exact
+						component={ApplicantReferences}
 					/>
 					<Route path='/' exact component={Home} />
 				</Switch>

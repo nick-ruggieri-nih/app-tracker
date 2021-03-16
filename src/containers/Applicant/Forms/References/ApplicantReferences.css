@@ -1,0 +1,40 @@
+.form-container {
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: inline-block;
+}
+
+.form-desc {
+	max-width: 765px;
+	display: inline-block;
+	/* flex-wrap: wrap; */
+}
+
+.referencesForm {
+	justify-content: center;
+}
+
+.names {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 800px;
+}
+
+.names > * {
+	flex-grow: 1;
+	max-width: 365px;
+}
+
+.emailPhoneDiv {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 750px;
+}
+
+.emailPhoneDiv > * {
+	flex-grow: 1;
+	max-width: 365px;
+}
