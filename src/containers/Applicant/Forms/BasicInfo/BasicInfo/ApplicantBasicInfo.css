@@ -10,7 +10,7 @@
 
 .basicInfoForm {
 	padding: 10px;
-	max-width: 1170px;
+	/* max-width: 1170px; */
 }
 
 .form-desc {
@@ -36,38 +36,39 @@
 .names {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 100%;
-	justify-content: space-between;
+	max-width: 68%;
 }
 
 .names > * {
 	flex-grow: 1;
 	flex-wrap: wrap;
-	max-width: 251px;
-	justify-content: space-between;
+	width: 250px;
 }
 
 .names > * > * {
 	flex-grow: 1;
 	flex-wrap: wrap;
-	max-width: 251px;
-	justify-content: space-between;
+	width: 250px;
 }
 
 .emailDiv {
 	flex-grow: 1;
-	max-width: 383px;
+	max-width: 380px;
 }
 
 .phones {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	max-width: 68%;
 }
 
 .phones > * {
 	flex-grow: 1;
 	flex-wrap: wrap;
-	max-width: 300px;
-	justify-content: space-between;
+	max-width: 380px;
+}
+
+.degree {
+	max-width: 250px;
 }

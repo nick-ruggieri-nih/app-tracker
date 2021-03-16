@@ -115,19 +115,20 @@ const ApplicantBasicInfo = () => {
 					/>
 				</Form.Item>
 			</div>
-			<Form.Item
-				name={['user', 'degree']}
-				label='Do you possess a Doctorate Degree?'
-				style={{ width: '312.06px' }}
-				rules={[
-					{
-						message: 'Value should be yes or no',
-						required: true,
-					},
-				]}
-			>
-				<Input placeholder='Y/N' />
-			</Form.Item>
+			<div className='degree'>
+				<Form.Item
+					name={['user', 'degree']}
+					label='Do you possess a Doctorate Degree?'
+					rules={[
+						{
+							message: 'Value should be yes or no',
+							required: true,
+						},
+					]}
+				>
+					<Input placeholder='Y/N' />
+				</Form.Item>
+			</div>
 			<Form.Item>
 				<Button type='primary' htmlType='submit'>
 					Submit
