@@ -1,0 +1,15 @@
+.form-container {
+	padding-left: 10px;
+}
+
+.flex-container {
+	display: flex;
+	max-width: 66%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.flex-container > * {
+	flex-grow: 1;
+	max-width: 375px;
+}

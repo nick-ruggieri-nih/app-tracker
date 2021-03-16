@@ -11,97 +11,78 @@ import './ApplicantAddress.css';
 
 const ApplicantAddress = () => {
 	return (
-		<Form layout='vertical' name='Address' style={{ paddingLeft: '10px' }}>
-			<h3 className='form-title'>Address</h3>
-			<div className='addressLines'>
-				<Form.Item
-					name={['user', 'address', 'one']}
-					label='Address Line One'
-					style={{ display: 'inline-block', width: '375.55px' }}
-					rules={[
-						{
-							required: true,
-							message: 'Please enter address',
-						},
-					]}
-				>
-					<Input placeholder='Please Enter' />
-				</Form.Item>
-				<Form.Item
-					name={['user', 'address', 'two']}
-					label='Address Line Two'
-					style={{
-						display: 'inline-block',
-						marginLeft: '10px',
-						width: '375.55px',
-					}}
-				>
-					<Input placeholder='Please Enter' />
-				</Form.Item>
-			</div>
-			<div className='cityStateProv'>
-				<Form.Item
-					name={['user', 'city']}
-					label='City'
-					style={{ display: 'inline-block', width: '375.55px' }}
-					rules={[
-						{
-							required: true,
-							message: 'Please enter city',
-						},
-					]}
-				>
-					<Input placeholder='Please Enter' />
-				</Form.Item>
-				<Form.Item
-					name={['user', 'state', 'province']}
-					label='State/Province'
-					style={{
-						display: 'inline-block',
-						marginLeft: '10px',
-						width: '375.55px',
-					}}
-					rules={[
-						{
-							required: true,
-							message: 'Please enter state/province',
-						},
-					]}
-				>
-					<Input placeholder='Please Enter' />
-				</Form.Item>
-			</div>
-			<Form.Item
-				name={['user', 'country']}
-				label='Country'
-				style={{ display: 'inline-block', width: '375.55px' }}
-				rules={[
-					{
-						required: true,
-						message: 'Please enter state/province',
-					},
-				]}
-			>
-				<Input placeholder='Please Enter' />
-			</Form.Item>
-			<Form.Item
-				name={['user', 'zip']}
-				label='Zip / Postal Code'
-				style={{
-					display: 'inline-block',
-					marginLeft: '10px',
-					width: '375.55px',
-				}}
-				rules={[
-					{
-						required: true,
-						message: 'Please enter zip/postal code',
-					},
-				]}
-			>
-				<Input placeholder='Please Enter' />
-			</Form.Item>
-			{/* <Form.Item
+		<div className='form-container'>
+			<Form layout='vertical' name='Address'>
+				<h3 className='form-title'>Address</h3>
+				<div className='flex-container'>
+					<Form.Item
+						name={['user', 'address', 'one']}
+						label='Address Line One'
+						rules={[
+							{
+								required: true,
+								message: 'Please enter address',
+							},
+						]}
+					>
+						<Input placeholder='Please Enter' />
+					</Form.Item>
+					<Form.Item name={['user', 'address', 'two']} label='Address Line Two'>
+						<Input placeholder='Please Enter' />
+					</Form.Item>
+				</div>
+				<div className='flex-container'>
+					<Form.Item
+						name={['user', 'city']}
+						label='City'
+						rules={[
+							{
+								required: true,
+								message: 'Please enter city',
+							},
+						]}
+					>
+						<Input placeholder='Please Enter' />
+					</Form.Item>
+					<Form.Item
+						name={['user', 'state', 'province']}
+						label='State/Province'
+						rules={[
+							{
+								required: true,
+								message: 'Please enter state/province',
+							},
+						]}
+					>
+						<Input placeholder='Please Enter' />
+					</Form.Item>
+				</div>
+				<div className='flex-container'>
+					<Form.Item
+						name={['user', 'country']}
+						label='Country'
+						rules={[
+							{
+								required: true,
+								message: 'Please enter state/province',
+							},
+						]}
+					>
+						<Input placeholder='Please Enter' />
+					</Form.Item>
+					<Form.Item
+						name={['user', 'zip']}
+						label='Zip / Postal Code'
+						rules={[
+							{
+								required: true,
+								message: 'Please enter zip/postal code',
+							},
+						]}
+					>
+						<Input placeholder='Please Enter' />
+					</Form.Item>
+					{/* <Form.Item
 				name={['user', 'zip']}
 				label='Zip / Postal Code'
 				style={{
@@ -128,12 +109,14 @@ const ApplicantAddress = () => {
 			>
 				<Input placeholder='Please Enter' />
 			</Form.Item> */}
-			<Form.Item>
-				<Button type='primary' htmlType='submit'>
-					Submit
-				</Button>
-			</Form.Item>
-		</Form>
+				</div>
+				<Form.Item>
+					<Button type='primary' htmlType='submit'>
+						Submit
+					</Button>
+				</Form.Item>
+			</Form>
+		</div>
 	);
 };
 
