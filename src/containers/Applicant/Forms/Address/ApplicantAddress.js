@@ -9,10 +9,14 @@ import {
 } from 'antd';
 import './ApplicantAddress.css';
 
+const onSubmit = (values) => {
+	console.log('submitting:', values.user);
+};
+
 const ApplicantAddress = () => {
 	return (
 		<div className='form-container'>
-			<Form layout='vertical' name='Address'>
+			<Form layout='vertical' name='Address' onFinish={onSubmit}>
 				<h3 className='form-title'>Address</h3>
 				<div className='flex-container'>
 					<Form.Item
@@ -45,7 +49,7 @@ const ApplicantAddress = () => {
 						<Input placeholder='Please Enter' />
 					</Form.Item>
 					<Form.Item
-						name={['user', 'state', 'province']}
+						name={['user', 'state/province']}
 						label='State/Province'
 						rules={[
 							{

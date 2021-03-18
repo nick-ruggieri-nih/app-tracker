@@ -1,4 +1,4 @@
-import { Form, Input, Slider, Button, Select } from 'antd';
+import { Form, Input, Slider, Button, Select, Radio } from 'antd';
 import './ApplicantBasicInfo.css';
 
 const { Option } = Select;
@@ -34,8 +34,17 @@ const ApplicantBasicInfo = () => {
 		</Form.Item>
 	);
 
+	const onSubmit = (values) => {
+		console.log('submitting:', values);
+	};
+
 	return (
-		<Form layout='vertical' name='BasicInfo' className='basicInfoForm'>
+		<Form
+			layout='vertical'
+			name='BasicInfo'
+			className='basicInfoForm'
+			onFinish={onSubmit}
+		>
 			<div className='form-desc'>
 				<h3 className='form-title'>Basic Information</h3>
 				<p className='title-desc'>
@@ -126,7 +135,10 @@ const ApplicantBasicInfo = () => {
 						},
 					]}
 				>
-					<Input placeholder='Y/N' />
+					<Radio.Group>
+						<Radio value='Yes'>Yes</Radio>
+						<Radio value='No'>No</Radio>
+					</Radio.Group>
 				</Form.Item>
 			</div>
 			<Form.Item>
